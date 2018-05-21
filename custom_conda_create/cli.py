@@ -6,14 +6,20 @@ Console script for custom_conda_create.
 
 import sys
 import click
-
+from . import custom_conda_create
 
 @click.command()
-def main(args=None):
-    """Console script for custom_conda_create."""
-    click.echo("Replace this message by putting your code into "
-               "custom_conda_create.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+@click.argument('env_name')
+# def main(args=None):
+def main(env_name=None):
+    """
+    Console script for custom_conda_create.
+    """
+    if not env_name:
+        click.echo("See 'ccc --help' for more information.")
+        sys.exit(1)
+    custom_conda_create.run_conda_create(env_name)
+    
     return 0
 
 
