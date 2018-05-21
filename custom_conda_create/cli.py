@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for custom_conda_create."""
+"""
+Console script for custom_conda_create.
+"""
+
 import sys
 import click
 

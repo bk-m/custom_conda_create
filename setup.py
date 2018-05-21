@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = ['Click>=6.7', ]
 
 setup_requirements = [ ]
 
@@ -33,7 +33,7 @@ setup(
     description="Small CLI tool that customizes the conda create command.",
     entry_points={
         'console_scripts': [
-            'custom_conda_create=custom_conda_create.cli:main',
+            'ccc=custom_conda_create.cli:main',
         ],
     },
     install_requires=requirements,

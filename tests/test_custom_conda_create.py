@@ -9,6 +9,7 @@ from click.testing import CliRunner
 
 from custom_conda_create import custom_conda_create
 from custom_conda_create import cli
+from custom_conda_create.util import shell_funcs
 
 
 class TestCustom_conda_create(unittest.TestCase):
